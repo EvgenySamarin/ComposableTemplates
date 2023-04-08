@@ -63,6 +63,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":composables"))
+
     Config.Libs.implementationsCommon.forEach(::implementation)
     Config.Libs.implementationsAppModule.forEach(::implementation)
     Config.Libs.testImplementations.forEach(::testImplementation)
