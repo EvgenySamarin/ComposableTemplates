@@ -39,6 +39,9 @@ object Config {
     object Libs {
         val implementationsCommon = listOf(
             "androidx.core:core-ktx:${Config.Versions.CORE_KTX}",
+            "androidx.compose.ui:ui:${Config.Versions.COMPOSE}",
+            "androidx.compose.ui:ui-tooling-preview:${Config.Versions.COMPOSE}",
+            "androidx.compose.material3:material3:${Config.Versions.COMPOSE_MATERIAL}",
         )
 
         val testImplementations = listOf(
@@ -47,9 +50,6 @@ object Config {
 
         val implementationsAppModule = listOf(
             "androidx.activity:activity-compose:${Config.Versions.COMPOSE_ACTIVITY}",
-            "androidx.compose.ui:ui:${Config.Versions.COMPOSE}",
-            "androidx.compose.ui:ui-tooling-preview:${Config.Versions.COMPOSE}",
-            "androidx.compose.material3:material3:${Config.Versions.COMPOSE_MATERIAL}",
         )
 
         val androidTestImplemetations = listOf(

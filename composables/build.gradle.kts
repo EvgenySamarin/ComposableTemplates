@@ -4,7 +4,7 @@ import ey.samarin.composabletemplates.Config.Project
 
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    kotlin("android")
 }
 
 android {
@@ -35,9 +35,20 @@ android {
     kotlinOptions {
         jvmTarget = Project.JVM_TARGET
     }
+
+    @Suppress("UnstableApiUsage")
+    buildFeatures {
+        compose = true
+    }
+
+    @Suppress("UnstableApiUsage")
+    composeOptions {
+        kotlinCompilerExtensionVersion = Config.Versions.COMPOSE
+    }
 }
 
 dependencies {
     Config.Libs.implementationsCommon.forEach(::implementation)
+    Config.Libs.debugImplementations.forEach(::debugImplementation)
     Config.Libs.testImplementations.forEach(::testImplementation)
 }
